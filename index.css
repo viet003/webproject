@@ -984,6 +984,7 @@ select option {
 
 .button {
    position: relative;
+   cursor: pointer;
 }
 
 ._main_button {
@@ -1009,14 +1010,14 @@ select option {
    z-index: 1;
 }
 
-._main_button>a {
+._main_button>p {
    text-decoration: none;
    color: white;
    transition: color .3s;
    font-size: 16px;
 }
 
-._main_button:hover>a {
+._main_button:hover>p {
    color: #767677;
 }
 
