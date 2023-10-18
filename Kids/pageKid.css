@@ -1,6 +1,6 @@
 body,
 html {
-   font-family:"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+   font-family: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
    width: 100%;
    height: 100%;
 }
@@ -23,7 +23,7 @@ a {
 
 /* No */
 .no {
-   display:none;
+   display: none;
    position: fixed;
    top: 0;
    left: 0;
@@ -103,21 +103,21 @@ a {
 
 @keyframes ship_animation_up {
    from {
-      top : -300px;
+      top: -300px;
    }
 
    to {
-      top : 0px;
+      top: 0px;
    }
 }
 
 @keyframes ship_animation_out {
    from {
-      top :0px;
-   }  
+      top: 0px;
+   }
 
-   to { 
-      top : -300px;
+   to {
+      top: -300px;
    }
 }
 
@@ -202,14 +202,14 @@ a {
 }
 
 /* Phần logo*/
-.navbar>.logo {
+.logo {
    display: flex;
    align-items: start;
    padding-left: 50px;
    margin-top: 10px;
 }
 
-.navbar>.logo>._logo {
+.logo>._logo {
    width: 70px;
    height: 70px;
    overflow: visible;
@@ -239,14 +239,32 @@ a {
    align-items: center;
 }
 
+.main>.subnav>li>a::after {
+   background: none repeat scroll 0 0 transparent;
+   bottom: 0;
+   content: "";
+   display: block;
+   height: 3px;
+   left: 50%;
+   position: absolute;
+   background: #fff;
+   transition: width 0.3s ease 0s, left 0.3s ease 0s;
+   width: 0;
+}
+
+.main>.subnav>li>a:hover:after {
+   width: 100%; 
+   left: 0;
+   background-color: black;
+}
+
 .main>.subnav>li>a {
    text-decoration: none;
    color: black;
    font-size: 14px;
-}
-
-.main>.subnav>li:hover {
-   border-bottom: 3px solid black;
+   position: relative;
+   height: 100%;
+   padding-top: 10px;
 }
 
 .main>.subnav>li:nth-of-type(1):hover>.sub_content {
@@ -254,6 +272,10 @@ a {
 }
 
 .main>.subnav>li:nth-child(2):hover>.sub_content {
+   display: block;
+}
+
+.main>.subnav>li:nth-child(3):hover>.sub_content {
    display: block;
 }
 
@@ -367,7 +389,7 @@ a.a_hover:hover {
    transition: transform 0.1s ease-in-out;
 }
 
-.language_select{
+.language_select {
    position: relative;
 }
 
@@ -378,7 +400,7 @@ a.a_hover:hover {
 .language_change {
    position: absolute;
    right: 0;
-   top:100%;
+   top: 100%;
    width: 250px;
    height: 200px;
    background-color: white;
@@ -483,87 +505,97 @@ select option {
 /* Phần main chính*/
 /* video*/
 ._video {
-    position: relative;
-    width: 100vw;
-    height: 90vh;
-    overflow: hidden;
- }
- 
- .fill_picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
- }
- 
- .fill_picture>img {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
- }
- .intro {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
- }
- 
- .intro>._wrap {
-    width: 80%;
-    margin: 0 auto;
- }
- 
- ._wrap>div {
-    z-index: 10;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    gap: 30px;
- }
- 
- .what>.wrap{
-    width: 85%;
+   position: relative;
+   width: 100vw;
+   height: 90vh;
+   overflow: hidden;
+}
+
+.fill_picture {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.fill_picture>img {
+   height: 100%;
+   width: 100%;
+   z-index: 1;
+}
+
+.intro {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.intro>._wrap {
+   width: 80%;
    margin: 0 auto;
- }
- .what>.wrap>h1 {
+}
+
+._wrap>div {
+   z-index: 10;
+   width: 35%;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.what>.wrap {
+   width: 85%;
+   margin: 0 auto;
+}
+
+.what>.wrap>h1 {
    margin-top: 20px;
- }
- 
- .what>.wrap>.content {
+}
+
+.what>.wrap>.content {
    display: grid;
    grid-template-columns: auto auto auto;
    gap: 20px;
    margin: 20px 0px;
    margin-bottom: 40px;
- }
- 
- .same {
+}
+
+.same {
    width: calc(100/3 - 20px);
    height: 500px;
- }
- 
- .same>img {
+}
+
+.same>img {
    width: 100%;
    height: 90%;
    object-fit: cover;
- }
- 
- .same>p {
-    font-size: 18px;
-    margin-top: 10px;
- }
- 
- .same>h2 {
+}
+
+.same>p {
+   font-size: 18px;
+   margin-top: 10px;
+}
+
+.same>h2 {
    font-size: 18px;
    margin-top: 10px;
    text-decoration: underline;
- }
+   transition: all .2s ease-in-out;
+   width: 90px;
+}
+
+.same>h2:hover {
+   background-color: black;
+   color: white;
+}
+
 /* Phần footer */
 /* ĐĂng ký thành viên*/
 .members {

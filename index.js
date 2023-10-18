@@ -49,7 +49,7 @@ function open_ship() {
         });
     });
 
-    div_hidden.addEventListener("click" , ()=> {
+    div_hidden.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
         bar.classList.add("ani_out");
@@ -59,7 +59,7 @@ function open_ship() {
         });
     })
 
-    close.addEventListener("click" , () => {
+    close.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
         bar.classList.add("ani_out");
@@ -171,7 +171,7 @@ function chose_item() {
 }
 // Hidden more
 function Hidden(a) {
-    a.forEach((el)=> {
+    a.forEach((el) => {
         el.style.display = "none";
     });
 }
@@ -223,7 +223,7 @@ function convert_img() {
     var i = 0;
     var j = 0;
 
-    setInterval(()=> {
+    setInterval(() => {
         let img = document.getElementById("vip");
         let img_1 = document.getElementById("vip1");
         img.src = list_img[i];
@@ -245,13 +245,26 @@ function convert_img() {
         if (i > 1) {
             i = 0;
         }
-        if(j > 2) {
+        if (j > 2) {
             j = 0;
         }
-    },3000);
+    }, 3000);
 }
 
+// Thay đổi ảnh khi hover 
+function chose_image() {
+    var convert = document.querySelectorAll("#convert_img");
 
+    convert.forEach((el) => {
+        var big_img = el.querySelector(".image>img");
+        var small_img = el.querySelectorAll(".small_image>img");
+        small_img.forEach((e) => {
+            e.addEventListener("mouseover" , ()=> {
+                big_img.src = e.src;
+            });
+        });
+    });
+}
 // check xem đã cuộn hết hoặc chưa cuộn
 
 /*function check_scroll_slick() {
@@ -266,7 +279,7 @@ function convert_img() {
         }
     })
 
-} không hoạt động*/ 
+} không hoạt động*/
 
 
 

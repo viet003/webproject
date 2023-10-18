@@ -202,14 +202,14 @@ a {
 }
 
 /* Phần logo*/
-.navbar>.logo {
+.logo {
    display: flex;
    align-items: start;
    padding-left: 50px;
    margin-top: 10px;
 }
 
-.navbar>.logo>._logo {
+.logo>._logo {
    width: 70px;
    height: 70px;
    overflow: visible;
@@ -239,21 +239,44 @@ a {
    align-items: center;
 }
 
+.main>.subnav>li>a::after {
+   background: none repeat scroll 0 0 transparent;
+   bottom: 0;
+   content: "";
+   display: block;
+   height: 3px;
+   left: 50%;
+   position: absolute;
+   background: #fff;
+   transition: width 0.3s ease 0s, left 0.3s ease 0s;
+   width: 0;
+}
+
+.main>.subnav>li>a:hover:after {
+   width: 100%; 
+   left: 0;
+   background-color: black;
+}
+
 .main>.subnav>li>a {
    text-decoration: none;
    color: black;
    font-size: 14px;
+   position: relative;
+   height: 100%;
+   padding-top: 10px;
 }
 
-.main>.subnav>li:hover {
-   border-bottom: 3px solid black;
-}
 
 .main>.subnav>li:nth-of-type(1):hover>.sub_content {
    display: block;
 }
 
 .main>.subnav>li:nth-child(2):hover>.sub_content {
+   display: block;
+}
+
+.main>.subnav>li:nth-child(3):hover>.sub_content {
    display: block;
 }
 
@@ -304,6 +327,7 @@ a {
    border-top: 1px solid gainsboro;
    border-right: 1px solid gainsboro;
    align-items: center;
+   font-weight: bold;
 }
 
 .content_5 {
@@ -311,6 +335,7 @@ a {
    padding-left: 10px;
    border-top: 1px solid gainsboro;
    align-items: center;
+   font-weight: bold;
 }
 
 .content_6 {
@@ -318,6 +343,7 @@ a {
    padding-left: 20px;
    border-top: 1px solid gainsboro;
    align-items: center;
+   font-weight: bold;
 }
 
 .a_hover {
@@ -581,7 +607,6 @@ select option {
    position: absolute;
    top: 0;
    left: 0;
-   z-index: 10;
 }
 
 .image-item {
