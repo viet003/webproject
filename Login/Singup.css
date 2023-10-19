@@ -79,32 +79,6 @@ a {
     margin: 40px auto;
 }
 
-.forgot {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.forgot>a>div {
-    height: 40px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.forgot>a>div:hover {
-    background-color: #008080;
-}
-
-.forgot>a>div>p {
-    font-size: small;
-    color: gainsboro;
-}
-
 input {
     width: 100%;
     padding: 10px;
