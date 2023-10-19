@@ -2,13 +2,63 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: rgba(0, 0, 255, 0.247);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.img>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottom>a>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.bottom>a>div:hover {
+    background-color: #008080;
+}
+
 .Login-box{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 600px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.774) ;
@@ -16,63 +66,67 @@ body{
     box-shadow: 0 15px 25px white;
     border-radius: 4%;
 }
-.Login-box h2{
+.Login-box>h2{
     margin: 0 0 10%;
     padding: 0;
     color: white;
     text-align: center;
 }
-.Login-box .user-box{
+.login-container {
+    /*text-align: center;*/
     position: relative;
+    width: 500px;
+    margin: 40px auto;
 }
-.Login-box .user-box input{
+
+input {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: white;
-    border: none;
-    margin-bottom: 10%;
-    border-bottom: 1px solid black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+    background-color: transparent;
     outline: none;
-    background: transparent;
-}
-.Login-box .user-box label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
     color: white;
-    pointer-events: none;
-    /* transition: .5s; */
 }
-.Login-box .user-box input:focus~label,
-.Login-box .user-box input:valid~label {
-    top: -20px ;
-    color: aqua;
-    font-size: 12px;
-}
-.Login-box form a{
-    position: relative;
-    display: inline-block;
-    font-size: 16px;
+
+.login-container>a {
     text-decoration: none;
-    color: white;
-    padding: 10% 0;
-    padding-right: 20%;
-    /* text-transform: uppercase; */
-    overflow: hidden;
-    transition: .5s;
-    /* letter-spacing: 4px; */
+    color: rgb(26, 115, 232);
 }
-.Login-box a:hover{
-    background: rgba(0, 255, 255, 0.466);
-    color: white;
-    border-radius: 5px;
-    
-}
-.Login-box a span{
+
+label {
+    font-size: 13px;
     position: absolute;
+    left: 10px;
+    top: -20px;
+    background-color: white;
+    padding: 0 5px;
+    display: none;
+    color: rgb(26, 115, 232);
+    background-color: transparent;
+}
+
+.login-container:hover>input {
+    border: 2px solid rgb(26, 115, 232) !important;
+}
+
+.login-container:hover>label {
     display: block;
 }
+
+.login-container:hover>input::placeholder {
+    color: transparent;
+}
+
+.login-container:hover>input:focus::placeholder {
+    color: transparent;
+}
+
+.login-container>input:focus {
+    border: 2px solid rgb(26, 115, 232) !important;
+}
+
+
 
