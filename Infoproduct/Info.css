@@ -563,6 +563,7 @@ select option {
     font-weight: bold;
     border-top: 1px solid black;
     height: 50px;
+    cursor: pointer;
 }
 
 .wrap_n>.title_1>i,
