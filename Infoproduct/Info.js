@@ -111,14 +111,69 @@ $(document).ready(function () {
 
 //slick-slider
 
+//slick-slider
 
 $(document).ready(function () {
     $(".image-slider").slick({
-        slidesToShow: 4, // slide hiển thị
+        slidesToShow: 4.5, // slide hiển thị
         slidesToScroll: 4, // slide sau mỗi lần cuộn
         infinite: false,  // set chế độ chạy slide
         prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fa-solid fa-arrow-left"></i></button>`,
         nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    infinite: false,
+                },
+            },
+
+            {
+                breakpoint: 741,
+                settings: {
+                    slidesToShow: 2 ,
+                    slidesToScroll:1,
+                },
+            },
+
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+});
+
+
+
+// slider menu
+
+$(document).ready(function () {
+    $(".close").click (function() {
+        $(".menu_hid").css('left', '-100%');
+        $(".body").css('overflow','scroll')
+    });
+
+    $(".open").click (function() {
+        $(".menu_hid").css('left', '0');
+        $(".body").css('overflow','hidden')
+    });
+
+    $(".a1").click(function () {
+        $(".c1").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
+    });
+
+    $(".a2").click(function () {
+        $(".c2").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
+    });
+
+    $(".a3").click(function () {
+        $(".c3").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
     });
 });

@@ -35,7 +35,7 @@ function text_animation() {
 // open ship
 function open_ship() {
     var p = document.querySelector(".text_animation>p");
-    var block_scroll = document.getElementById("body");
+    var block_scroll = document.querySelector(".body");
     var div_hidden = document.querySelector(".no");
     var bar = document.querySelector(".ship");
     var close = document.querySelector(".x");
@@ -48,7 +48,7 @@ function open_ship() {
     div_hidden.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        if(bar.style.height = "300px") {
+        if (bar.style.height = "300px") {
             bar.style.top = "-300px";
         }
     })
@@ -56,7 +56,7 @@ function open_ship() {
     close.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        if(bar.style.height = "300px") {
+        if (bar.style.height = "300px") {
             bar.style.top = "-300px";
         }
     })
@@ -251,7 +251,7 @@ function chose_image() {
         var big_img = el.querySelector(".image>img");
         var small_img = el.querySelectorAll(".small_image>img");
         small_img.forEach((e) => {
-            e.addEventListener("mouseover" , ()=> {
+            e.addEventListener("mouseover", () => {
                 big_img.src = e.src;
             });
         });
@@ -273,8 +273,6 @@ function chose_image() {
 
 } không hoạt động*/
 
-
-
 //slick-slider
 
 $(document).ready(function () {
@@ -287,29 +285,29 @@ $(document).ready(function () {
         dots: true,
         responsive: [
             {
-              breakpoint: 1025,
-              settings: {
-                slidesToShow: 4,
-              },
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    infinite: false,
+                },
             },
 
             {
                 breakpoint: 741,
                 settings: {
-                  slidesToShow: 2,
+                    slidesToShow: 2.3,
                 },
-              },
+            },
 
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                infinite: false,
-              },
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                },
             },
-          ],
+        ],
     });
 });
 
@@ -322,28 +320,55 @@ $(document).ready(function () {
         nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
         responsive: [
             {
-              breakpoint: 1025,
-              settings: {
-                slidesToShow: 3,
-              },
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                },
             },
 
             {
                 breakpoint: 741,
                 settings: {
-                  slidesToShow: 2.3,
+                    slidesToShow: 2.3,
                 },
-              },
+            },
 
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                infinite: false,
-              },
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    infinite: false,
+                },
             },
-          ],
+        ],
+    });
+});
+
+
+// slider
+
+$(document).ready(function () {
+    $(".close").click (function() {
+        $(".menu_hid").css('left', '-100%');
+        $(".body").css('overflow','scroll')
+    });
+
+    $(".open").click (function() {
+        $(".menu_hid").css('left', '0');
+        $(".body").css('overflow','hidden')
+    });
+
+    $(".a1").click(function () {
+        $(".c1").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
+    });
+
+    $(".a2").click(function () {
+        $(".c2").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
+    });
+
+    $(".a3").click(function () {
+        $(".c3").slideToggle(500); // Toggles the visibility of the element with id "toggleMe"
     });
 });

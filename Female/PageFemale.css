@@ -512,16 +512,19 @@ select option {
   .Menu{
     background-color: white;
     border-bottom: 1px solid black;
-    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
   }
   .Menu ul { 
     
     padding: 0; 
     list-style: none; 
-    display: table;
-    margin-left: 200px;
-    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
   }
   
   .Menu li { 
