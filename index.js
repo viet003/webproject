@@ -42,31 +42,23 @@ function open_ship() {
     p.addEventListener("click", () => {
         div_hidden.style.display = "block";
         block_scroll.style.overflow = "hidden";
-        bar.classList.add("ani");
         bar.style.top = "0px";
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani");
-        });
     });
 
     div_hidden.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        bar.classList.add("ani_out");
-        bar.style.top = "-300px";;
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani_out");
-        });
+        if(bar.style.height = "300px") {
+            bar.style.top = "-300px";
+        }
     })
 
     close.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        bar.classList.add("ani_out");
-        bar.style.top = "-300px";
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani_out");
-        });
+        if(bar.style.height = "300px") {
+            bar.style.top = "-300px";
+        }
     })
 }
 // gọi hàm chuyển ngôn ngữ
@@ -293,6 +285,31 @@ $(document).ready(function () {
         prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fa-solid fa-arrow-left"></i></button>`,
         nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
         dots: true,
+        responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+
+            {
+                breakpoint: 741,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                infinite: false,
+              },
+            },
+          ],
     });
 });
 
@@ -303,5 +320,30 @@ $(document).ready(function () {
         infinite: false,  // set chế độ chạy slide
         prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fa-solid fa-arrow-left"></i></button>`,
         nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
+        responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+
+            {
+                breakpoint: 741,
+                settings: {
+                  slidesToShow: 2.3,
+                },
+              },
+
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                infinite: false,
+              },
+            },
+          ],
     });
 });
