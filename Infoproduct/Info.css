@@ -1098,6 +1098,9 @@ div:nth-of-type(5) {
 }
 
 @media only screen and (max-width: 480px) {
+    slick-dots button {
+        width: 20px;
+    }
 
     .aboutship h1 {
         font-size: 12px;
