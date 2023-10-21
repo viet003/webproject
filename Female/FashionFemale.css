@@ -519,21 +519,34 @@ header {
     margin-bottom: 10%;
     
 }
+header h1{
+   margin-left: 3%;
+}
+header p {
+   margin-left: 3%;
+   margin-top: 1%;
+}
 .container {
     margin: 0 auto;
     padding: 0;
     max-width: 1500px;
 }
 .Menubar ul{
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid black;
+   display: grid;
+   grid-template-columns: repeat(4,auto);
+   border-bottom: 1px solid black;
 }
+
+.Menubar li {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 .Menubar a{
     color: black;
     display: inline-block;
     padding: 20px 10px;
-    margin: 0 135px;
     position: relative;
 }
 .Menubar a:after {    

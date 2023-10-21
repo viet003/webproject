@@ -519,6 +519,13 @@ header {
     margin-bottom: 10%;
     /* border-bottom: 1px solid black; */
 }
+header>h1{
+margin-left: 3%;
+}
+header p {
+   margin-left: 3%;
+   margin-top:1% ;
+}
 .container {
     margin: 0 auto;
     padding: 0;

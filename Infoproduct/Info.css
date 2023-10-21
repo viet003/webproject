@@ -1257,6 +1257,10 @@ div:nth-of-type(5) {
 
 @media only screen and (max-width: 1024px) {
 
+    .back>li>a {
+        font-size: 15px;
+    }
+
     .right_content {
         padding-left: 10px;
     }
