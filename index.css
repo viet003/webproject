@@ -1159,9 +1159,10 @@ select option {
    padding-top: 20px;
 }
 
-.list h2 {
+.list p {
    font-size: 15px;
    line-height: 2;
+   font-weight: 300;
 }
 
 .t1 {
@@ -1181,6 +1182,7 @@ select option {
 
 .clist a {
    transition: all .3s ease-in-out;
+   font-weight: 300;
 }
 
 .clist a:hover {
@@ -1191,6 +1193,15 @@ select option {
 
 .c1,.c2,.c3 {
    display: none;
+}
+
+.list_supporta {
+   border-top: 1px solid black;
+}
+
+.list_supporta >.clist {
+   margin-left: 0px;
+   margin-top: 10px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1209,7 +1220,7 @@ select option {
    }
 
    .slick-dots button {
-      width: 60px;
+      width: 20px;
    }
 
 }
@@ -1341,6 +1352,7 @@ select option {
 
    .members>.over>h1 {
       text-align: center;
+      font-size: 23px;
    }
 
    .info {
@@ -1356,12 +1368,6 @@ select option {
       gap: 10px;
       padding: 20px 0;
       background-color:#f5f5e5;
-   }
-
-   .policy li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
    }
 
    .image-item {
@@ -1395,10 +1401,6 @@ select option {
       display: block;
    }
 
-   .members>.over>h1 {
-      font-size: 25px;
-   }
-
    .intro>._wrap>div>h1 {
       font-size: 20px ;
    }
@@ -1413,13 +1415,24 @@ select option {
 
    .policy ul {
       display: grid;
-      grid-template-columns: auto auto;
-      row-gap: 2px;
+      grid-template-columns: repeat(2,auto);
    }
+
+   .policy>ul>li:nth-of-type(5) {
+      grid-column: span 2;
+   } 
 
    .policy>ul>li {
       padding: 0 20px;
       border-left: none;
+      margin: 5px 0;
+   }
+
+   
+   .policy li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 }
 
