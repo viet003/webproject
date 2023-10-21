@@ -1204,132 +1204,50 @@ select option {
    margin-top: 10px;
 }
 
-@media only screen and (max-width: 480px) {
-   .aboutship h1 {
-      font-size: 12px;
+
+/* Responsive*/
+
+
+@media only screen and (min-width: 1224px) and (max-width: 1600px) {
+   .over {
+      width: 80%;
    }
    
-   .aboutship p {
-      font-size: smaller;
-   }
-   
-   .aboutship a {
-      text-decoration: underline;
-      font-weight: bold;
-      font-size: 12px;
-   }
-
-   .slick-dots button {
-      width: 20px;
-   }
-
 }
 
-@media only screen and (min-width: 480px) and (max-width: 740px){
-   .slick-dots button {
-      width: 100px;
-   }
-}
-
-/*-----------------------------------------------------------*/
-@media only screen  and (max-width: 740px) {
-
-   .post>span {
-      font-size: 14px;
-   }
-
-   .navbar_sub {
-      grid-template-columns: 25% 50% 25%;
-   }
-
-   .ship>.wrap {
-      width: 95%;
-      margin: 10px auto;
-   }
-
+@media only screen and (min-width: 1024px) and (max-width: 1224px) {
    .navbar {
-      display: none;
+      grid-template-columns: 15% 55% 30%;
    }
 
-   .navbar_sub {
-      display: grid;
+   .info>.over {
+      width: 90%;
    }
 
-   .none {
-      height: 90px;
-   }
-   
-   .what>.wrap>.content {
-      height: 320px;
-   }
-   
-   .content>.same {
-      width: calc(100/3 - 20px);
-      height: 300px;
-   }
-
-   .image-banner {
-      height: 300px;
-   }
-
-      
-   ._main_button {
-      width: 170px;
-   }
-   
-   .button::after {
-      width: 169px;
-   }
-
-   ._wrap>div {
-      z-index: 10;
-      width: 70%;
+   .members>.over {
       display: flex;
-      justify-content: center;
-      align-content: center;
       flex-direction: column;
-      gap: 10px;
+   }
+
+   .subnav>li>a {
+      font-size: 13px !important; 
+   }
+
+   .sub_content a {
+      font-size:12px;
+   }
+
+   .content_link {
+      display: grid;
+      grid-template-columns: 20% 15% 15% 15% 15% 20%;
+      grid-template-rows: 90% 10%;
    }
 }
 
-@media only screen and (min-width: 740px) and (max-width: 1024px) {
-   .navbar {
-      display: none;
-   }
 
-   .navbar_sub {
-      display: grid;
-   }
-
-   .none {
-      height: 90px;
-   }
-
-   .what>.wrap>.content {
-      min-height: 320px;
-      max-height: 400px;
-   }
-   
-   .content>.same {
-      width: calc(100/3 - 20px);
-      height: 400px;
-   }
-
-   .image-banner {
-      height: 400px;
-   }
-
-   ._wrap>div {
-      z-index: 10;
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-direction: column;
-      gap: 30px;
-   }
+.s {
+   display: none;
 }
-
 
 @media only screen and (max-width: 1024px) {   
    .about_me>.wrap {
@@ -1436,43 +1354,132 @@ select option {
    }
 }
 
-
-@media only screen and (min-width: 1024px) and (max-width: 1224px) {
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
    .navbar {
-      grid-template-columns: 15% 55% 30%;
+      display: none;
    }
 
-   .info>.over {
-      width: 90%;
-   }
-
-   .members>.over {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .subnav>li>a {
-      font-size: 13px !important; 
-   }
-
-   .sub_content a {
-      font-size:12px;
-   }
-
-   .content_link {
+   .navbar_sub {
       display: grid;
-      grid-template-columns: 20% 15% 15% 15% 15% 20%;
-      grid-template-rows: 90% 10%;
    }
-}
 
-@media only screen and (min-width: 1224px) and (max-width: 1600px) {
-   .over {
-      width: 80%;
+   .none {
+      height: 90px;
+   }
+
+   .what>.wrap>.content {
+      min-height: 320px;
+      max-height: 400px;
    }
    
+   .content>.same {
+      width: calc(100/3 - 20px);
+      height: 400px;
+   }
+
+   .image-banner {
+      height: 400px;
+   }
+
+   ._wrap>div {
+      z-index: 10;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      gap: 30px;
+   }
 }
 
-.s {
-   display: none;
+
+@media only screen  and (max-width: 740px) {
+
+   .post>span {
+      font-size: 14px;
+   }
+
+   .navbar_sub {
+      grid-template-columns: 25% 50% 25%;
+   }
+
+   .ship>.wrap {
+      width: 95%;
+      margin: 10px auto;
+   }
+
+   .navbar {
+      display: none;
+   }
+
+   .navbar_sub {
+      display: grid;
+   }
+
+   .none {
+      height: 90px;
+   }
+   
+   .what>.wrap>.content {
+      height: 320px;
+   }
+   
+   .content>.same {
+      width: calc(100/3 - 20px);
+      height: 300px;
+   }
+
+   .image-banner {
+      height: 300px;
+   }
+
+      
+   ._main_button {
+      width: 170px;
+   }
+   
+   .button::after {
+      width: 169px;
+   }
+
+   ._wrap>div {
+      z-index: 10;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      gap: 10px;
+   }
 }
+
+
+@media only screen and (min-width: 480px) and (max-width: 740px){
+   .slick-dots button {
+      width: 100px;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   .aboutship h1 {
+      font-size: 12px;
+   }
+   
+   .aboutship p {
+      font-size: smaller;
+   }
+   
+   .aboutship a {
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 12px;
+   }
+
+   .slick-dots button {
+      width: 20px;
+   }
+
+}
+
+
+/*-----------------------------------------------------------*/
