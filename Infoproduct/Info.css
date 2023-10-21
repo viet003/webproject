@@ -1154,7 +1154,7 @@ div:nth-of-type(5) {
     }
 
     .show_more {
-        left: 35%;
+        left: 30%;
     }
 
 }
@@ -1252,29 +1252,6 @@ div:nth-of-type(5) {
         height: 90px;
     }
 
-    .what>.wrap>.content {
-        min-height: 320px;
-        max-height: 400px;
-    }
-
-    .content>.same {
-        width: calc(100/3 - 20px);
-        height: 400px;
-    }
-
-    .image-banner {
-        height: 400px;
-    }
-
-    ._wrap>div {
-        z-index: 10;
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        gap: 30px;
-    }
 }
 
 
