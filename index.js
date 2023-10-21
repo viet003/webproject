@@ -291,7 +291,6 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     arrows: false,
                     infinite: false,
-                    dots:false,
                 },
             },
 
