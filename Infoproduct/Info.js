@@ -29,41 +29,32 @@ function text_animation() {
         }
     }, 5000);
 }
-// open ship
 function open_ship() {
     var p = document.querySelector(".text_animation>p");
-    var block_scroll = document.getElementById("body");
+    var block_scroll = document.querySelector(".body");
     var div_hidden = document.querySelector(".no");
     var bar = document.querySelector(".ship");
     var close = document.querySelector(".x");
     p.addEventListener("click", () => {
         div_hidden.style.display = "block";
         block_scroll.style.overflow = "hidden";
-        bar.classList.add("ani");
         bar.style.top = "0px";
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani");
-        });
     });
 
     div_hidden.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        bar.classList.add("ani_out");
-        bar.style.top = "-300px";;
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani_out");
-        });
+        if (bar.style.height = "300px") {
+            bar.style.top = "-300px";
+        }
     })
 
     close.addEventListener("click", () => {
         div_hidden.style.display = "none";
         block_scroll.style.overflow = "scroll";
-        bar.classList.add("ani_out");
-        bar.style.top = "-300px";
-        bar.addEventListener("animationend", function () {
-            bar.classList.remove("ani_out");
-        });
+        if (bar.style.height = "300px") {
+            bar.style.top = "-300px";
+        }
     })
 }
 // gọi hàm chuyển ngôn ngữ
