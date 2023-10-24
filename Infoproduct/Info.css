@@ -99,10 +99,7 @@ a {
 
 /* Phần thanh tiêu đề - gồm tất cả animation , css ..*/
 .title {
-    position: fixed;
     width: 100%;
-    left: 0px;
-    top: 0px;
     z-index: 1000;
     display: block;
 }
@@ -1334,10 +1331,6 @@ div:nth-of-type(5) {
 
     .navbar_sub {
         display: grid;
-    }
-
-    .none {
-        height: 90px;
     }
 
     .what>.wrap>.content {
